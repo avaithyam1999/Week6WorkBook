@@ -18,7 +18,7 @@ public class Program {
         for (Asset asset : assets) {
             if (asset instanceof House) {
                 House house = (House) asset;
-                System.out.printf("%s at %s\n", house.getDescription(), house.getAddress());
+                System.out.printf("%s at %s\nValue: %.2f\n", house.getDescription(), house.getAddress(),house.getValue());
             } else if (asset instanceof Vehicle) {
                 Vehicle vehicle = (Vehicle) asset;
                 System.out.printf("Vehicle: %s - (year: %d)\n", vehicle.getMakeModel(), vehicle.getYear());
