@@ -15,6 +15,14 @@ public class Program {
         assets.add(car1);
         assets.add(car2);
 
-
+        for (Asset asset : assets) {
+            if (asset instanceof House) {
+                House house = (House) asset;
+                System.out.printf("%s at %s\n", house.getDescription(), house.getAddress());
+            } else if (asset instanceof Vehicle) {
+                Vehicle vehicle = (Vehicle) asset;
+                System.out.printf("Vehicle: %s - (year: %d)\n", vehicle.getMakeModel(), vehicle.getYear());
+            }
+        }
     }
 }
