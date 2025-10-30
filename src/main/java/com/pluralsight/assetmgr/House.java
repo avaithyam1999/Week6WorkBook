@@ -46,6 +46,7 @@ public class House extends Asset{
         this.lotSize = lotSize;
     }
 
+    @Override
     public double getValue() {
 
         double houseValue = switch (condition) {
@@ -56,19 +57,8 @@ public class House extends Asset{
             default -> 0;
         };
         return houseValue;
-
-//        double value = super.getOriginalCost()/(squareFoot * 1.25);
-//        if (value >= 180) {
-//            condition = 1;
-//        } else if (value < 180 && value >= 130) {
-//            condition = 2;
-//        } else if (value < 130 && value >= 90) {
-//            condition = 3;
-//        } else if (value < 90 && value >= 80) {
-//            condition = 4;
-//        }
-//        return value;
     }
+}
 //    getValue() : double (override)
 // A house's value is determined as
 // $180.00 per square foot (excellent)
@@ -76,5 +66,3 @@ public class House extends Asset{
 // $90.00 per square foot (fair)
 // $80.00 per square foot (poor)
 // PLUS 25 cents per square foot of lot size
-
-}

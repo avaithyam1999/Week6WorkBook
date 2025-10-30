@@ -42,16 +42,17 @@ public class Vehicle extends Asset {
         return carAge;
     }
 
+    @Override
     public double getValue() {
         int currentYear = 2025;
         int carAge = currentYear - getYear();
         double value;
         if (carAge <= 3) {
-            value = getOriginalCost() * .97;
+            value = getOriginalCost() * (carAge * .97);
         } else if (carAge() >= 4 && carAge() <= 6) {
-            value =  getOriginalCost() * .94;
+            value =  getOriginalCost() * (carAge * (1-.06));
         } else if (carAge() >= 7 && carAge() <= 10) {
-            value = getOriginalCost() * .92;
+            value = getOriginalCost() * (carAge * (1-.08));
         } else {
             value = getOriginalCost() - 1000;
         }
