@@ -48,11 +48,11 @@ public class Vehicle extends Asset {
         int carAge = currentYear - getYear();
         double value;
         if (carAge <= 3) {
-            value = getOriginalCost() * (carAge * .97);
+            value = getOriginalCost() * .97;
         } else if (carAge() >= 4 && carAge() <= 6) {
-            value =  getOriginalCost() * (carAge * (1-.06));
+            value =  getOriginalCost() * .94;
         } else if (carAge() >= 7 && carAge() <= 10) {
-            value = getOriginalCost() * (carAge * (1-.08));
+            value = getOriginalCost() * .92;
         } else {
             value = getOriginalCost() - 1000;
         }
